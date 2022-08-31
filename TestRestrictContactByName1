@@ -1,0 +1,12 @@
+@isTest
+private class TestRestrictContactByName{
+   private static testmethod void restrictContactByNameTest(){
+       Contact cont = new Contact();
+       cont.FirstName = 'NewContact';
+       cont.LastName = 'INVALIDNAME';
+       insert cont;
+       cont.FirstName = 'NewContact1122';
+       cont.LastName = 'INVALIDNAME1122';
+       insert cont;
+   }
+}
